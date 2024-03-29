@@ -1,0 +1,242 @@
+/*전체를 감싸는 부분*/
+
+.warp{
+    width: 100%;
+}
+
+
+/* 헤드라인 부분(윗쪽 부분) */
+    .topContainer{
+        width:100%;
+        height: 120px;
+        position: relative;
+        margin-bottom: 10px;
+        /* background-color: antiquewhite; 확인용, 지울부분 */
+    }
+        /* 1. 로고 부분 */
+        .topLogo{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            /*반응형으로 바뀌어서 내려간다면,
+            warp으로 잡는다.
+            */
+        }
+
+        .logo{
+            width: 600px;
+            overflow: hidden; /* 자식에서 float */
+            margin-left: 5px;
+            margin-top: 10px;
+            /* background-color: aquamarine;  지울 것 */
+        }
+
+        .logo>img{
+            width: 80px;
+            height: 60px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .logo>h1{
+            height: 60px;
+            line-height: 60px;
+            float: left;
+            font-size: 2.3rem;
+            color: blueviolet;
+        }
+    
+        .topNav{
+            width: 350px;
+            text-align: right; /*글씨가 오른쪽으로 올수있게.*/
+        }
+        .topNav li{
+            display: inline-block;
+        }
+        .topNav li>a{
+            display: inline-block; /*             inline은 너비높이 마진 이게 잘안먹는다. 그래서 block타입으로 바꿔준다.*/
+            padding: 10px 7px; /* 위/아래 , 왼/오*/
+        }
+        .topNav li>a:hover{
+            color: white;
+            background-color: blueviolet;
+            border-radius: 5px;
+        }
+
+
+    /* 2. 네비게이션 부분, 로그인, 회원가입,... */
+
+    .mainNav{
+        position: absolute;
+        bottom: 0px;
+        left:150px; 
+        /* background-color: aqua; */
+    }
+    .mainNav>ul{
+        display: flex;
+        flex-direction: row;        /*flex로 간다면,여유롭게 간다*/
+        justify-content: space-around;
+
+    }
+
+    .mainNav li>a{
+        display: inline-block;
+        padding: 5px 12px;
+        font-size: 1.1rem;
+    }
+
+    .mainNav li>a:hover{
+        color: blueviolet;
+    }
+   
+    /* 경계선*/
+    hr{
+        border: 1px solid blueviolet ; 
+        margin-bottom: 10px;
+    }
+
+    /* 검색 부분 */
+    .search{
+        width: 100%;
+        height: 70px;
+        line-height : 70px;
+        padding: 3px 0px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        border-top: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+        margin: 20px;
+    }
+    /* 1. 자료검색, 강좌검색 */
+    .search>form{
+        overflow: hidden;
+    }
+    .search>form>div{
+        float: left;
+        width: 210px;
+        /* background-color : aqua; */
+    }
+    .search>form>div span{
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 12px;
+    }
+    /* .search>form>input */
+    /* .search>from>input[type="text]*/
+    .search>form>input[type="textSearch"]{
+        height: 35px;
+        width:320px;
+        /* text align : center*/
+        padding-left: 10px;
+    }
+
+
+    /* 배너 이미지 부분 */
+    .banner{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner>img{
+        width: 100%;
+    }
+
+    /* 코스 설명 부분, 글쓰기 교실... */
+    .courseInfo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* 공간이 부족하면 요소 아래로 배치 */
+        margin-bottom: 20px;
+    }
+
+    /* .courseInfo>a{
+        /* display: inline-block;
+        padding: 2px 3px;
+        margin: 3px 2px; 
+    } */
+    .courseInfo img{
+        box-sizing: border-box;
+        width: 240px;
+    }
+
+    /* 탭이 있는 부분, 공지사항, .... */
+    .mainInfo{
+        box-sizing: border-box; /* border, padding 포함 width와 height */
+        width: 100%;
+        height: 420px;
+
+        display: flex;
+        flex-direction: row; /* 플렉스 아이템(자식요소) 배치 방향 */
+        flex-wrap: wrap;
+        justify-content: space-between; /* 양쪽 끝에 맞춰 배치*/
+   
+    }
+
+    /* 탭 부분 */
+    .tabMenu{
+        width: 600px;
+        height: 420px;
+        
+        margin-right: 20px;
+    }
+
+    /* tab 제목 부분 */
+    .tabTitle{
+        height: 49px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;;
+    }
+
+    /* tab 제목의 버튼 부분*/
+    .tabTitle button{
+        width: 150px;
+        background-color: inherit; /* 부모것 상속 받기*/
+        float: left;
+        border: none;
+        cursor: pointer; /* 마우스 포인터 모양 */
+        padding: 14px 16px;
+        transition: 0.2s; 
+        /* 변화되는 속도, 하나의 스타일이 완전히 다른 스타일로 바뀌는 것*/
+       /* 시간 : 스타일로 바뀌는 시간
+                    초단위*/
+        font-size: 17px;
+    }
+    .tabTitle button:hover{ /* 마우스 포인터가 올라왔을 때 */
+        background-color: #ddd;
+   }
+
+   .tabTitle button.active{ /* 활성화 되었을 때 */
+        background-color: #ccc;
+   }
+
+   .tabPage{
+        box-sizing: border-box;
+        height: 369px;
+        display: none;  /*숨기기, 자리까지 없어짐 */
+        padding: 6px 12px;
+        border: 1px soild #ccc;
+        border-top: none; /* 윗쪽 테두리 없앰 */
+   }
+
+   .tablinkInit{
+    display: block;
+   }
+
+
+
+   /* 책 이미지 부분 책소개 */
+   .bookInfo>img{
+            box-sizing: border-box;
+            width: 340px;
+            height: 369px;
+            /* vertical-align: baseline; */
+            margin-top: 50px;
+   }
+
+   /* footer 부분 */

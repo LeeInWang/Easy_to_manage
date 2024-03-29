@@ -1,0 +1,86 @@
+@charset "UTF-8";
+ body {
+    font-family: Arial, sans-serif; 
+    background-color: aliceblue;	
+    min-width: 630px;
+  }
+  .wrapper {
+  	top: 0;
+    margin-bottom : 150px;
+    z-index: 2;
+    display: block;
+  }
+ 
+  .container {	
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    margin-right: 200px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    border-color: black;
+    background-color: aliceblue;
+    float: right;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1.2rem;
+  }
+  #orderProductCount {
+    width: 10%;
+  }
+  #orderProductPrice,
+  #orderDeliveryCost,
+  #orderTotalAmount,
+  #orderPhoneNumber,
+  #orderPaymentType,
+  #orderDate,
+  #boardDate,
+  #boardUser {
+    width : 30%; 
+  }
+
+  #orderUserName,
+  #orderRecipientName,
+  #orderDeliveryCompanyName,
+  #orderDelivery {
+    width: 20%;
+  }
+
+  #orderTrackingNumber {
+    width: 40%;
+  }
+  .form-group input[type="submit"],
+  .form-group input[type="button"] {
+      width: 40%;
+      padding: 10px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px 0px;
+  }
+  .form-group input>button:hover,
+  .form-group input>submit:hover {
+    background-color: #4cae4c;
+  }
+  
+
+
+  textarea{
+    width: 240px;
+    height: 250px;
+  }
