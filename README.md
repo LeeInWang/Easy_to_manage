@@ -15,8 +15,9 @@ CRUD로 쇼핑몰 관리자 페이지를 구현하였습니다.
 ## 개발 환경
 - Java 17
 - JDK 17.0.9
-- * IDE *: Eclipce 2023-03, VSCode 1.85.1
-- * Database *: MySQL 8.0.27
-- * Server *: apache tomcat 9.0.85
+- __IDE__: Eclipce 2023-03, VSCode 1.85.1
+- __Database__: MySQL 8.0.27
+- __Server__: apache tomcat 9.0.85
 
 ## 주요 기능
+1. 로그인 기능
