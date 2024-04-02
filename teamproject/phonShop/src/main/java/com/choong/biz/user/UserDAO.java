@@ -21,7 +21,7 @@ public class UserDAO {
 	private String USER_DELETE = "delete from userManagement where userId=?"; //삭제
 	private String USER_LIST = "select * from userManagement";		//목록
 	private String USER_INSERT = "insert into userManagement values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //DB갯수 21
-	private String USER_UPDATE = "update userManagement set userName=?, userGrade=?, userPassword=?, userEmail1=?, userEmail2=?, userZipcode=?, userAddress1=?, userAddress2=?, userBirthdayYear=?, userBirthdayMonth=?, userBirthdayDay=?, userTotalPurchaseAmount=?, userPhoneNumber1=?, userPhoneNumber2=?, userPhoneNumber3=?, userNumber=? where userId=?";
+	private String USER_UPDATE = "update userManagement set userName=?, userGrade=?, userTotalPurchaseCount=?, userAccessBlocked=?, userPassword=?, userEmail1=?, userEmail2=?, userZipcode=?, userAddress1=?, userAddress2=?, userBirthdayYear=?, userBirthdayMonth=?, userBirthdayDay=?, userTotalPurchaseAmount=?, userPhoneNumber1=?, userPhoneNumber2=?, userPhoneNumber3=?, userNumber=? where userId=?";
 	private String USER_LASTLOGINDATE_UPDATE = "update userManagement set userLastLoginDate=? where userId=?";
 	
 	

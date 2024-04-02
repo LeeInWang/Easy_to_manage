@@ -16,7 +16,7 @@
 <body>
 	<div class="wrap">
 		<header>
-			<jsp:include page="/WEB-INF/phone/header.jsp" flush="true" />
+			<jsp:include page="header.jsp" flush="true" />
 		</header>
 		<aside class="side">
 			<jsp:include page="productaside.jsp" flush="true" />

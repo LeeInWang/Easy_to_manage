@@ -40,9 +40,6 @@ public class LoginServlet extends HttpServlet {
 		//#메인 페이지 - 이동(유저 리스트 - 임시)
 		}else if(PATH.equals("/home.do")) {
 			home(request,response);
-		//#헤더 - 로그아웃  
-		}else if(PATH.equals("/logout.do")) {
-			logout(request, response);
 		}
 		
 	}
@@ -56,6 +53,10 @@ public class LoginServlet extends HttpServlet {
 			String id = request.getParameter("id");
 			String password = request.getParameter("password");
 			
+			//지워야할것 ★★★★
+			UserGradeDAO userGradeDAO = new UserGradeDAO();
+			userGradeDAO.updateUserGradeCount();
+			
 			//db 연결해서 정보 가져오기
 			UserDTO dto = new UserDTO();
 			dto.setUserId(id);
@@ -65,39 +66,41 @@ public class LoginServlet extends HttpServlet {
 			
 			//화면 이동
 		
-			HttpSession session = request.getSession();
-			
-			
-			
-			
-			
-			if(user !=null && user.getUserPassword().equals(password)) {
+//			HttpSession session = request.getSession();
+//			
+//			
+//			
+//			
+//			
+//			if(user !=null && user.getUserPassword().equals(password)) {
+//				
+//				
+//				//#로그인시 최근접속일 넣어주기
+//				  //현재시간 구하기
+//		         Timestamp timestamp2 = new Timestamp(System.currentTimeMillis());
+//		         //String을 Timestamp로 변환
+//		         dto.setUserLastLoginDate(timestamp2);
+//		         
+//		         dao.updateUserLastLoginDate(dto); // DAO - 업데이트
+//				
+//				
+//				
+//				
+//				//로그인 성공시 검색된 회원 객체를 세션에 저장하기 위해서 세션 객체를 얻기
+//				session.setAttribute("user", user);
+//		
+//				
+//				//로그인 성공시 글 목록 화면으로 이동
+//				RequestDispatcher dispatcher = request.getRequestDispatcher("/home.do");
+//				dispatcher.forward(request, response);
+//			}else {
+//				//로그인 실패시 다시 로그인 화면으로 이동
+//				RequestDispatcher dispatcher = request.getRequestDispatcher("/loginView.do");
+//				dispatcher.forward(request, response);
+//			}
 				
-				
-				//#로그인시 최근접속일 넣어주기
-				  //현재시간 구하기
-		         Timestamp timestamp2 = new Timestamp(System.currentTimeMillis());
-		         //String을 Timestamp로 변환
-		         dto.setUserLastLoginDate(timestamp2);
-		         
-		         dao.updateUserLastLoginDate(dto); // DAO - 업데이트
-				
-				
-				
-				
-				//로그인 성공시 검색된 회원 객체를 세션에 저장하기 위해서 세션 객체를 얻기
-				session.setAttribute("user", user);
-		
-				
-				//로그인 성공시 글 목록 화면으로 이동
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/home.do");
-				dispatcher.forward(request, response);
-			}else {
-				//로그인 실패시 다시 로그인 화면으로 이동
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-				dispatcher.forward(request, response);
-			}
-				
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/home.do");
+			dispatcher.forward(request, response);
 		}
 		
 		//#메인 페이지 - 이동(유저 리스트 - 임시)
@@ -127,27 +130,6 @@ public class LoginServlet extends HttpServlet {
 				
 		}
 		
-		
-		//#로그아웃 page
-		private void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-			// 세션에 검색 관련 정보를 저장한다. 
-			HttpSession session = request.getSession();
-
-			//세션을 제거합니다.
-			session.invalidate();
-
-		
-		
-			
-			
-			
-			// 3. 화면 이동
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-			//RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/phone/Statistics/Statistics1.jsp");
-			dispatcher.forward(request, response);	
-				
-		}
 		
 	
 	

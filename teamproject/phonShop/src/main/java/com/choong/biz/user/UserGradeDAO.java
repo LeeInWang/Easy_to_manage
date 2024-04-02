@@ -244,10 +244,10 @@ public class UserGradeDAO {
 			
 			try {
 				con = MyDBConnection.getConnection();
-				pstmt = con.prepareStatement(USER_GRADE_GradeCount); // Join사용
+				pstmt = con.prepareStatement(USER_GRADE_GradeCount);
 				rs = pstmt.executeQuery();
 				
-				while(rs.next()) { 
+				while(rs.next()) { //DB의 이름이랑 같아야 하고, 
 					
 					String userGrade = rs.getString("userGrade");
 					String userGradeCount = rs.getString("userGradeCount");
@@ -255,7 +255,7 @@ public class UserGradeDAO {
 			
 					try {
 						con = MyDBConnection.getConnection();
-						pstmt = con.prepareStatement(USER_GRADE_GradeCount_UPDATE);	// Join에 사용된 데이터를 userGradeCount에 값 입력
+						pstmt = con.prepareStatement(USER_GRADE_GradeCount_UPDATE);
 						pstmt.setString(1, userGradeCount);
 						pstmt.setString(2, userGrade);
 					

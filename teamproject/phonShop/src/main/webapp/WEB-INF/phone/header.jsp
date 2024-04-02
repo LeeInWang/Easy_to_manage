@@ -24,7 +24,7 @@
    		<div id='cssmenu2'>
         <li><a href='#' id="icon1"><i class="material-icons">home</i>HOME</a></li>
         <li><a href='#' id="icon2"><i class="material-icons">account_circle</i>Admin님 접속 성공</a></li>
-        <li id="logout"><a href='logout.do'><span>로그아웃</span></a></li>
+        <li id="logout"><a href='#'><span>로그아웃</span></a></li>
         </div>
     </ul>
 </div>
