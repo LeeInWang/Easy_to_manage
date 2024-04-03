@@ -19,14 +19,29 @@ CRUD로 쇼핑몰 관리자 페이지를 구현하였습니다.
 - __Database__: MySQL 8.0.27
 - __Server__: apache tomcat 9.0.85
 
+## 간트차트
+![간트차트](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/cb18ab01-f47c-4d52-8fdf-5afd4bead5c6)
+
 
 ## 흐름도
+![흐름도](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/4f73c5d0-ae12-4968-bcb9-09ce14442791)
 
 
 ## ERD
+![ERD](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/d0e59b9b-d63c-4820-9650-a3ccee8ee02c)
 
 
 ## 클래스 다이어그램
+![클래스다이어그램1](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/2b0f988f-eb72-4108-9b7f-063c8926d272)
+
+
+![클래스다이어그램2](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/a9cd22b6-0e16-4468-b3f1-c74c4c584531)
+
+
+![클래스다이어그램3](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/b5dd36b4-3663-4ce1-8c4b-fb2bf44b9e5d)
+
+
+![클래스다이어그램4](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/c7cef0c8-8dcd-4470-8cb5-9e55116e0f9b)
 
 
 
