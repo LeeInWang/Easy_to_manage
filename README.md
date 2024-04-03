@@ -134,7 +134,7 @@ CRUD로 쇼핑몰 관리자 페이지를 구현하였습니다.
 ㅡ참고ㅡ
 
 
-sede-bar: ("https://www.codingnepalweb.com/side-menu-bar-with-sub-menu-javascript")
+sede-bar: (https://www.codingnepalweb.com/side-menu-bar-with-sub-menu-javascript)
 
 header-nav: (https://codepen.io/mael331/details/LNLzrb)
 
