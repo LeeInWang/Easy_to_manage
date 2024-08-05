@@ -50,7 +50,7 @@ update productManagement set productDisplayStatus ="숨김", productSalePrice=1,
       mainCategory="가죽", subCategory="과일", productBest=1 where productCode="ABC123";
 
 select * from productManagement;
-drop table  userManagement;
+-- drop table  userManagement;
 create table userManagement(
     userId varchar(12) primary key,
     userName varchar(10) not null,  /* FK*/
@@ -117,13 +117,6 @@ create table orderManagement(
     orderDeliveryRequest  varchar(30) not null,
     orderDelivery VARCHAR(50) not null
 );
-
-
-update orderManagement set OrderId=?, getOrderProductName=?, OrderProductCount =? ,
-         OrderProductPrice=?, OrderDeliveryCost=?, getOrderTotalAmount=?, OrderDate=?,
-         OrderUserName=?, OrderRecipientName=?, OrderPaymentType=?, OrderPhoneNumber=?,
-         OrderTrackingNumber=?, OrderDeliveryCompanyName=?, OrderRecipientAddress=? ,
-         OrderDeliveryRequest=?, orderDelivery=? where orderID=?;
             
 
 
@@ -169,7 +162,7 @@ select orderId, orderTrackingNumber, orderUserName, orderProductName, orderTotal
 select * from orderManagement where orderDelivery like '%대기';
 
 
-drop table userGradeManagement;
+-- drop table userGradeManagement;
 create table userGradeManagement(
 
    userGradeNumber int auto_increment primary key,
@@ -227,7 +220,7 @@ create table productReviewManagement(
 );
 ALTER TABLE productReviewManagement AUTO_INCREMENT = 1;
 
-drop table boardManagement;
+-- drop table boardManagement;
 create table boardManagement(
    boardNumber   int auto_increment primary key,
    boardTitle    VARCHAR(50) not null, 
