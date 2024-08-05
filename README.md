@@ -156,6 +156,8 @@ CRUD로 쇼핑몰 관리자 페이지를 구현하였습니다.
 
 ![반응형3](https://github.com/LeeInWang/Easy_to_manage/assets/156063957/6f91e81c-6832-4121-b05a-db0b4c0abb49)
 
+## Youtube
+https://youtu.be/SS4Z-cZWYpQ
 
 ㅡ참고ㅡ
 
